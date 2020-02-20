@@ -11,3 +11,6 @@ Landing page centers around manipulating the DOM with Javascript
 - 4th section added upon page load
 - Active states enabled when section is inside viewport
 - Click LI in navbar to scroll to appropriate section
+
+_New Commit_
+- Navbar item is highlighted when section is in scroll view
