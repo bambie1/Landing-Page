@@ -2,7 +2,7 @@
 Landing page centers around manipulating the DOM with Javascript
 
 ## Running code
-3 files ([index.html](index.html), [styles.css](styles.css), and [app.js](app.js)) have to be downloaded to the same folder
+3 files ([index.html](https://github.com/bambie1/Landing-Page/blob/master/landing-page/index.html), [styles.css](https://github.com/bambie1/Landing-Page/blob/master/landing-page/styles.css), and [app.js](https://github.com/bambie1/Landing-Page/blob/master/landing-page/app.js)) have to be downloaded to the same folder
 
 ## JS functionalities
 - Dynamically created navbar
