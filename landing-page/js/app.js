@@ -57,10 +57,7 @@ function buildNav(text, aTag, navItem){
     //eventListener to scroll to section, by ID
     node.addEventListener("click", function(){
         var sec = document.getElementById(navItem.id)
-        var elems = document.querySelectorAll("li");
-        [].forEach.call(elems, function(el) {
-            el.classList.remove("active-s");
-        });
+        var elems = document.querySelectorAll("LI");
         node.classList.add("active-s")
         sec.scrollIntoView({behavior: "smooth"})//scrolls, instead of auto-display                
     })
@@ -85,14 +82,31 @@ btn.addEventListener("click", scrollToTop)
 
 //checks if a section is in view 
 var nav = this.document.querySelector("header")
+var nav_secs = document.querySelectorAll("LI")
 var timer;//to display nav when scrolling
 var scrollFunc = function(){
     for (navItem of navItems){
         if(inView(navItem)){            
-            navItem.classList.add("your-active-class")            
+            navItem.classList.add("your-active-class")  
+            for(sec of nav_secs){
+                if(sec.innerText === navItem.dataset.nav){
+                    sec.classList.add("active-s")
+                } else {
+                    if(sec.classList.contains("active-s")){
+                        sec.classList.remove("active-s")
+                    }
+                }                
+            }
+            break;
+            // console.log(navItem)          
         }else{
             if(navItem.classList.contains("your-active-class")){
                 navItem.classList.remove("your-active-class")                
+            }
+            for(sec of nav_secs){
+                if(sec.classList.contains("active-s")){
+                    sec.classList.remove("active-s")
+                }
             }
         }
     }
